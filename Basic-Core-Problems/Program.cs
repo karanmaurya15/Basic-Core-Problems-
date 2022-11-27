@@ -4,14 +4,16 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter the First number :");
-            int firstNumber = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter the Second number :");
-            int secondNumber = Convert.ToInt32(Console.ReadLine());
-            firstNumber = firstNumber + secondNumber;
-            secondNumber = firstNumber - secondNumber;
-            firstNumber = firstNumber - secondNumber;
-            Console.WriteLine("After Swapping these Two Numbers : First number is = " + firstNumber + " and Second number is = " + secondNumber);
+            Console.WriteLine("Enter the number to Check");
+            int num = Convert.ToInt32(Console.ReadLine());
+            if (num % 2 == 0)
+            {
+                Console.WriteLine("{0} is an Even number", num);
+            }
+            else
+            {
+                Console.WriteLine("{0} is an Odd number", num);
+            }
         }
     }
 }
