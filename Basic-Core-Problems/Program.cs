@@ -4,15 +4,15 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter the number to Check");
-            int num = Convert.ToInt32(Console.ReadLine());
-            if (num % 2 == 0)
+            Console.WriteLine("Enter an Alphabet :");
+            char letter = Convert.ToChar(Console.ReadLine());
+            if (letter == 'a' || letter == 'e' || letter == 'i' || letter == 'o' || letter == 'u'|| letter == 'A' || letter == 'E' || letter == 'I' || letter == 'O' || letter == 'U')
             {
-                Console.WriteLine("{0} is an Even number", num);
+                Console.WriteLine("{0} is a vowel", letter);
             }
             else
             {
-                Console.WriteLine("{0} is an Odd number", num);
+                Console.WriteLine("{0} is a Consonant", letter);
             }
         }
     }
