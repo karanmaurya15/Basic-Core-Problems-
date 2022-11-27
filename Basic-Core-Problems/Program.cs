@@ -4,21 +4,12 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter the year");
-            int year = Convert.ToInt32(Console.ReadLine());
-            if (year > 999)
+            Console.WriteLine("Enter the power value");
+            int exponent = Convert.ToInt32(Console.ReadLine());
+            for (int i = 0; i <= exponent; i++)
             {
-                if (year % 400 == 0 || (year % 4 == 0 && year % 100 != 0))
-                {
-                    Console.WriteLine("{0} is a Leap Year", year);
-                }
-                else
-                {
-                    Console.WriteLine("{0} is not a Leap Year", year);
-                }
+                Console.WriteLine("2^{0} " + " " + "= {1}", i, Math.Pow(2, i));
             }
-            else
-            Console.WriteLine("Enter 4 digit number year");
         }
     }
 }
