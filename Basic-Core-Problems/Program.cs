@@ -4,15 +4,22 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter the last harmonic number\n");
-            double num = Convert.ToDouble(Console.ReadLine());
-            double harmonicSum = 0;
-            for (double i = 1; i <= num; i++)
+            Console.WriteLine("Enter the Number to Calculate is Factors :");
+            int number = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("The Prime  Factors are : ");
+            for (int i = 2; i * i <= number; i++)
             {
-                Console.WriteLine("1/" + i + "=" + (1 / i));
-                harmonicSum += (1 / i);
+                while (number % i == 0)
+                {
+                    Console.WriteLine(i);
+                    number /= i;
+                }
             }
-            Console.WriteLine("\nThe Sum of harmonic number is :" + harmonicSum);
+            if (number > 1)
+            {
+                Console.WriteLine(number);
+            }
+          
         }
     }
 }
