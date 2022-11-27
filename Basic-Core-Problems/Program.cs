@@ -4,12 +4,15 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter the power value");
-            int exponent = Convert.ToInt32(Console.ReadLine());
-            for (int i = 0; i <= exponent; i++)
+            Console.WriteLine("Enter the last harmonic number\n");
+            double num = Convert.ToDouble(Console.ReadLine());
+            double harmonicSum = 0;
+            for (double i = 1; i <= num; i++)
             {
-                Console.WriteLine("2^{0} " + " " + "= {1}", i, Math.Pow(2, i));
+                Console.WriteLine("1/" + i + "=" + (1 / i));
+                harmonicSum += (1 / i);
             }
+            Console.WriteLine("\nThe Sum of harmonic number is :" + harmonicSum);
         }
     }
 }
