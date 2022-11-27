@@ -4,16 +4,20 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter an Alphabet :");
-            char letter = Convert.ToChar(Console.ReadLine());
-            if (letter == 'a' || letter == 'e' || letter == 'i' || letter == 'o' || letter == 'u'|| letter == 'A' || letter == 'E' || letter == 'I' || letter == 'O' || letter == 'U')
-            {
-                Console.WriteLine("{0} is a vowel", letter);
-            }
+            Console.WriteLine("Enter the First number :");
+            int firstNumber = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter the Second number :");
+            int secondNumber = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter the Third number :");
+            int thirdNumber = Convert.ToInt32(Console.ReadLine());
+            if (firstNumber > secondNumber && firstNumber > thirdNumber)
+                Console.WriteLine("{0} is the Largest number", firstNumber);
+            else if (secondNumber > firstNumber && secondNumber > thirdNumber)
+                Console.WriteLine("{0} is the Largest number", secondNumber);
+            else if (thirdNumber > firstNumber && thirdNumber > secondNumber)
+                Console.WriteLine("{0} is the Largest number", thirdNumber);
             else
-            {
-                Console.WriteLine("{0} is a Consonant", letter);
-            }
+                Console.WriteLine("The Three numbers are equal");
         }
     }
 }
